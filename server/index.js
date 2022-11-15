@@ -1,6 +1,8 @@
-const express = require('express')
-const cors = require('cors')
-require('dotenv').config
+import express from 'express'
+import cors from 'cors'
+// const { createOne, getOne, getAll, updateOne, deleteOne } = require('./model.js')
+import { createOne, getOne, getAll, updateOne, deleteOne } from './model.js'
+import config from 'dotenv'
 
 const app = express()
 app.use(express.json())
@@ -22,7 +24,7 @@ app.delete('/mvp/:id', (req, res) => {
   res.status(200).json('Got a DELETE request at /id')
 })
 
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
   console.log(`Server is currently listening on port ${PORT}`)

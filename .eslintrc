@@ -1,6 +1,8 @@
 {
   "parserOptions": {
-    "ecmaVersion": 2021
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
   },
   "extends": [
     "plugin:jsx-a11y/recommended",
