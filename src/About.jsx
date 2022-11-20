@@ -12,7 +12,6 @@ import Footer from './Footer.jsx'
 
 export default function About() {
   const [menu, setMenu] = useState(true)
-  const navLinks = document.getElementById('nav-links')
 
   const menuStyle = {
     right: menu ? '-200px' : '0px',
@@ -39,17 +38,17 @@ export default function About() {
           <div className="about-col">
             <h1>We make good coffee.</h1>
             <p>
-              Established in 1998, Q has made coffee since a young age. He's always wanted to make a
-              coffee shop and make it the best it can be. After graduating from Coffee Reactor's
-              advanced coffee 12-week immersive, he and his team has what it takes to make the best
-              coffee ever.
+              Established in 1998, Q has made coffee since a young age. He&#39;s always wanted to
+              make a coffee shop and make it the best it can be. After graduating from Coffee
+              Reactor&#39;s advanced coffee 12-week immersive, he and his team has what it takes to
+              make the best coffee ever.
             </p>
             <Link className="hero-btn red-btn" to="/">
               EXPLORE NOW
             </Link>
           </div>
           <div className="about-col">
-            <img src={coffeeshop}></img>
+            <img src={coffeeshop} alt="coffeeshop"></img>
           </div>
         </div>
       </section>

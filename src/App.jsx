@@ -20,7 +20,7 @@ export default function App() {
       <section className="header">
         <Navbar />
         <div className="text-box">
-          <h1>The best coffee in the whold wide world</h1>
+          <h1>The best coffee in the whole wide world</h1>
           <p>The moment you have been waiting for is finally here</p>
           <Link className="hero-btn" to="/about">
             Visit us to know more
@@ -91,26 +91,26 @@ export default function App() {
       <section className="testimonials">
         <h1>Customer Reviews</h1>
         <p>
-          We've sourced from a million of reviews and have listed the most relevant and upvoted.
+          We&#39;ve sourced from a million of reviews and have listed the most relevant and upvoted.
           These are unbiased and objective fr.
         </p>
         <div className="row">
           <div className="testimonial-col">
             <img src={review1} alt="a11y-placeholder" />
             <div>
-              Absolutely love the coffee here. I don't drink much coffee but I decided to give Q's
-              coffee a visit. Was glad I did. I tried the house special, Q recommended I try all 3
-              drinks and see the taste difference. Now I'm an Americano lover.
-              <h3>User 1</h3>
+              Absolutely love the coffee here. I don&#39;t drink much coffee but I decided to give
+              Q&#39;s coffee a visit. Was glad I did. I tried the house special, Q recommended I try
+              all 3 drinks and see the taste difference. Now I&#39;m an Americano lover.
+              <h3>notquyen</h3>
             </div>
           </div>
           <div className="testimonial-col">
             <img src={review2} alt="a11y-placeholder" />
             <div>
-              Great coffee. Great place to study and hang out with friends and family. I'm an active
-              coffee connoisseur and the cold brew was refreshing. After talking to Q, the owner, I
-              was happy to find out that they grow their own beans. Crazy.
-              <h3>User 2</h3>
+              Great coffee. Great place to study and hang out with friends and family. I&#39;m an
+              active coffee connoisseur and the cold brew was refreshing. After talking to Q, the
+              owner, I was happy to find out that they grow their own beans. Crazy.
+              <h3>ohdangitsquyen</h3>
             </div>
           </div>
         </div>

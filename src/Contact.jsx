@@ -8,17 +8,23 @@ import kbbq from './assets/6.korean-bbq.jpg'
 import './styles/main.css'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
+import coffeeshop from './assets/15.coffee-shop.jpg'
+
+const initialState = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  phoneNumber: '',
+  message: '',
+}
 
 export default function Contact() {
-  const [menu, setMenu] = useState(true)
-  const navLinks = document.getElementById('nav-links')
+  const [form, setForm] = useState(initialState)
 
-  const menuStyle = {
-    right: menu ? '-200px' : '0px',
-  }
-
-  const showMenu = () => {
-    setMenu(!menu)
+  const submitHandler = () => {
+    event.preventDefault()
+    console.log('this is what the form data looks like', form)
+    setForm(initialState)
   }
 
   return (
@@ -34,17 +40,50 @@ export default function Contact() {
       <section className="about-us">
         <div className="row">
           <div className="about-col">
-            <h1>We are the world's largest university</h1>
-            <p>
-              Sa sdj ksa nkdja s asj asdn bksa bdkjsa sadbs ada askd b sakbdsa dsa sdkasd sdaj knd
-              sa das dsa dkas dksa dsad askd as
-            </p>
-            <a href="" className="hero-btn red-btn">
-              EXPLORE NOW
-            </a>
+            <h4>Enter your contact info and we will get back to as soon as possible!</h4>
+            <form>
+              <input
+                type="text"
+                placeholder="First name *"
+                onChange={(event) => {
+                  setForm({ ...form, firstName: event.target.value })
+                }}
+              />
+              <input
+                type="text"
+                placeholder="Last name *"
+                onChange={(event) => {
+                  setForm({ ...form, lastName: event.target.value })
+                }}
+              />
+              <input
+                type="text"
+                placeholder="Email *"
+                onChange={(event) => {
+                  setForm({ ...form, email: event.target.value })
+                }}
+              />
+              <input
+                type="text"
+                placeholder="Phone number *"
+                onChange={(event) => {
+                  setForm({ ...form, phoneNumber: event.target.value })
+                }}
+              />
+              <textarea
+                type="text"
+                placeholder="Message *"
+                onChange={(event) => {
+                  setForm({ ...form, message: event.target.value })
+                }}
+                rows="8"
+                cols="100"
+              />
+              <button type="submit">Submit</button>
+            </form>
           </div>
           <div className="about-col">
-            <img src={kbbq}></img>
+            <img src={coffeeshop} alt="coffeeshop"></img>
           </div>
         </div>
       </section>
@@ -52,3 +91,5 @@ export default function Contact() {
     </main>
   )
 }
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quis velit et blanditiis, sapiente nostrum repellendus mollitia numquam, facere facilis dolorum. Aspernatur tenetur illum labore nulla nobis quasi similique architecto!
