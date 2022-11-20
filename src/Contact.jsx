@@ -37,10 +37,9 @@ export default function Contact() {
         </div>
         {/* <img className="banner-image-1" src={banner1} alt="mtfuji" /> */}
       </section>
-      <section className="about-us">
+      <section className="contact-us">
         <div className="row">
-          <div className="about-col">
-            <h4>Enter your contact info and we will get back to as soon as possible!</h4>
+          <div className="contact-col">
             <form>
               <input
                 type="text"
@@ -48,6 +47,7 @@ export default function Contact() {
                 onChange={(event) => {
                   setForm({ ...form, firstName: event.target.value })
                 }}
+                required
               />
               <input
                 type="text"
@@ -55,6 +55,7 @@ export default function Contact() {
                 onChange={(event) => {
                   setForm({ ...form, lastName: event.target.value })
                 }}
+                required
               />
               <input
                 type="text"
@@ -62,6 +63,7 @@ export default function Contact() {
                 onChange={(event) => {
                   setForm({ ...form, email: event.target.value })
                 }}
+                required
               />
               <input
                 type="text"
@@ -69,6 +71,7 @@ export default function Contact() {
                 onChange={(event) => {
                   setForm({ ...form, phoneNumber: event.target.value })
                 }}
+                required
               />
               <textarea
                 type="text"
@@ -77,13 +80,24 @@ export default function Contact() {
                   setForm({ ...form, message: event.target.value })
                 }}
                 rows="8"
-                cols="100"
+                required
               />
-              <button type="submit">Submit</button>
+              <button type="submit" className="hero-btn red-btn">
+                Send Message
+              </button>
             </form>
           </div>
-          <div className="about-col">
-            <img src={coffeeshop} alt="coffeeshop"></img>
+          <div className="location">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8535.406981959057!2d-122.40257292495933!3d37.78741832796654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858085bdb9cd35%3A0xbdb5525f0a6d91a6!2sHack%20Reactor!5e0!3m2!1sen!2sus!4v1668924437958!5m2!1sen!2sus"
+              width="600"
+              height="450"
+              style={{ border: '0' }}
+              allowfullscreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="myFrame"
+            ></iframe>
           </div>
         </div>
       </section>
@@ -91,5 +105,3 @@ export default function Contact() {
     </main>
   )
 }
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quis velit et blanditiis, sapiente nostrum repellendus mollitia numquam, facere facilis dolorum. Aspernatur tenetur illum labore nulla nobis quasi similique architecto!
