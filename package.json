@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/quyencodes/hr-mvp#readme",
   "dependencies": {
+    "@react-three/drei": "^9.42.2",
+    "@react-three/fiber": "^8.9.1",
     "@tabler/icons": "^1.111.0",
     "axios": "^1.1.3",
     "dotenv": "^16.0.3",

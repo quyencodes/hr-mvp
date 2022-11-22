@@ -5,7 +5,6 @@ import Footer from './Footer.jsx'
 
 export default function Navbar() {
   const [menu, setMenu] = useState(true)
-  const navLinks = document.getElementById('nav-links')
 
   const menuStyle = {
     right: menu ? '-200px' : '0px',
@@ -47,6 +46,11 @@ export default function Navbar() {
           <li>
             <Link className="nav-link" to="/about">
               ABOUT
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-link" to="/layout">
+              LAYOUT
             </Link>
           </li>
           <li>
